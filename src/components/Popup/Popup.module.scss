@@ -1,0 +1,105 @@
+.popup {
+    width: 484px;
+    height: 584px;
+}
+
+.wrapper {
+    display: flex;
+    border-radius: 8px;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    padding-top: 62px;
+    background-color: rgb(255, 255, 255);
+    animation: blowUpModal 0.5s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
+}
+
+.icon-close {
+    position: absolute;
+    top: 22px;
+    right: 22px;
+    display: flex;
+    width: 24px;
+    height: 24px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    cursor: pointer;
+    background-color: rgba(22, 24, 35, 0.03);
+    transform: scale(1.7);
+}
+
+.body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 10px 0;
+    overflow-y: overlay;
+}
+
+.title {
+    color: rgb(22, 24, 35);
+    font-family: SofiaPro, Arial, Tahoma, PingFangSC, sans-serif;
+    font-size: 3.2rem;
+    margin: 36px 0 28px 0;
+}
+
+.option {
+    position: relative;
+    width: 80%;
+    margin: 0 12px 18px 12px;
+    color: rgba(22, 24, 35, 0.85);
+    font-family: ProximaNova, Arial, Tahoma, PingFangSC, sans-serif;
+    font-weight: 600;
+    border: 1px solid rgba(22, 24, 35, 0.12);
+    font-size: 1.5rem;
+    background-color: transparent;
+    padding: 8px 0;
+    &:hover {
+        cursor: pointer;
+        color: rgb(22, 24, 35);
+        background-color: transparent;
+        border: 1px solid rgba(22, 24, 35, 0.12);
+    }
+}
+.option-icon {
+    position: absolute;
+    left: 18px;
+    font-size: 2rem;
+}
+
+.footer {
+    display: flex;
+    height: 64px;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    color: rgb(22, 24, 35);
+    border-top: 1px solid rgba(22, 24, 35, 0.12);
+}
+
+.signup {
+    color: var(--primary);
+}
+
+@keyframes blowUpModal {
+    0% {
+        transform: scale(0);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes blowUpModalTwo {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(0);
+        opacity: 0;
+    }
+}
